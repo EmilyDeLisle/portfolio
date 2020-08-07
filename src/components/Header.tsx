@@ -1,8 +1,9 @@
 import React from 'react'
-import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
+import { NavigationComponentProps } from './NavigationComponent'
+import { TopNavBar } from './TopNavBar'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,20 +16,16 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     name: {
       fontFamily: 'Leckerli One, cursive',
-      color: '#EA1E5A',
+      color: theme.palette.primary.main,
     },
   })
 )
 
-export const Header = () => {
+export const Header = ({ handleNavigationClick }: NavigationComponentProps) => {
   const classes = useStyles()
   return (
     <div className={`${classes.header} ${classes.text} header`}>
-      <AppBar>
-        <Toolbar>
-          <Typography>mle</Typography>
-        </Toolbar>
-      </AppBar>
+      <TopNavBar handleNavigationClick={handleNavigationClick} />
       <Toolbar id="back-to-top-anchor" />
       <div className="header__contents">
         <div>
@@ -37,7 +34,7 @@ export const Header = () => {
           </Typography>
           <Typography className={classes.text} variant="h5">
             I'm a (soon-to-be) new graduate of the Computer Systems Technology program at the
-            British Columbia Institute of Technology. I'm currently seeing a job as a software
+            British Columbia Institute of Technology. I'm currently seeking a job as a software
             developer.
           </Typography>
         </div>

@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { MouseEvent } from 'react'
+import { MuiThemeProvider } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { Header, ScrollToTopButton } from './components'
+import { theme } from './theme'
 
-function App() {
+export const App = () => {
+  const handleNavigationClick = (event: MouseEvent<HTMLDivElement>, anchorId: string) => {
+    const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(
+      anchorId
+    )
+
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
+
   return (
-    <div>
-      <Header />
-      <div>
+    <MuiThemeProvider theme={theme}>
+      <Header handleNavigationClick={handleNavigationClick} />
+      <div id='about-anchor'>
         <Typography>
           camera soul-delay -space woman -space corrupted stimulate fetishism. bomb beef noodles
           kanji man franchise girl cyber- math-. range-rover artisanal man uplink smart- sub-orbital
@@ -35,8 +47,8 @@ function App() {
           math- shanty town. cartel network stimulate neon lights physical courier claymore mine.
         </Typography>
       </div>
-      <ScrollToTopButton/>
-    </div>
+      <ScrollToTopButton handleNavigationClick={handleNavigationClick} />
+    </MuiThemeProvider>
   )
 }
 
