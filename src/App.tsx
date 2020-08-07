@@ -1,6 +1,6 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
-import { Header } from './components'
+import { Header, ScrollToTopButton } from './components'
 
 function App() {
   return (
@@ -35,6 +35,7 @@ function App() {
           math- shanty town. cartel network stimulate neon lights physical courier claymore mine.
         </Typography>
       </div>
+      <ScrollToTopButton/>
     </div>
   )
 }

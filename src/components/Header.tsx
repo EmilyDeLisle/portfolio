@@ -29,7 +29,7 @@ export const Header = () => {
           <Typography>mle</Typography>
         </Toolbar>
       </AppBar>
-      <Toolbar />
+      <Toolbar id="back-to-top-anchor" />
       <div className="header__contents">
         <div>
           <Typography className={classes.text} variant="h1" gutterBottom>
