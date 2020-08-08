@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(4),
       '&:hover': {
         color: theme.palette.secondary.main,
+        transition: '0.5s',
         cursor: 'pointer',
       },
     },

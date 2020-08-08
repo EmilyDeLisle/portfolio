@@ -6,6 +6,9 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       color: theme.palette.primary.contrastText
+    },
+    title: {
+      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
     }
   })
 )
@@ -20,7 +23,7 @@ export const Section = ({ children, title, anchorId }: SectionProps) => {
   const classes = useStyles()
   return (
     <section id={anchorId} className={`${classes.root} section`}>
-      <Typography variant="h3" color="primary" gutterBottom>
+      <Typography className={classes.title} variant="h3" color="primary" gutterBottom>
         {title}
       </Typography>
       {children}
