@@ -1,18 +1,26 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
+import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import { Section } from './Section'
 import portrait from '../assets/portrait.jpg'
 
 import techBootstrap from '../assets/bootstrap.png'
+import techC from '../assets/c.png'
 import techCSS from '../assets/css.png'
+import techFirebase from '../assets/firebase.png'
+import techGit from '../assets/git.png'
 import techHTML from '../assets/html.png'
 import techJava from '../assets/java.png'
 import techJQuery from '../assets/jquery.png'
 import techJS from '../assets/js.png'
+import techMaterial from '../assets/material.png'
 import techNodeJS from '../assets/nodejs.png'
 import techPS from '../assets/ps.png'
+import techPython from '../assets/python.png'
+import techReact from '../assets/react.png'
+import techTS from '../assets/ts.png'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -29,15 +37,11 @@ const technologies = [
   },
   {
     name: 'TypeScript',
-    image: techJS,
+    image: techTS,
   },
   {
     name: 'React',
-    image: techJS,
-  },
-  {
-    name: 'Material-UI',
-    image: techJS,
+    image: techReact,
   },
   {
     name: 'Java',
@@ -45,15 +49,11 @@ const technologies = [
   },
   {
     name: 'Python',
-    image: techJava,
+    image: techPython,
   },
   {
     name: 'C',
-    image: techHTML,
-  },
-  {
-    name: 'SQL',
-    image: techHTML,
+    image: techC,
   },
   {
     name: 'HTML',
@@ -65,11 +65,15 @@ const technologies = [
   },
   {
     name: 'Firebase',
-    image: techBootstrap,
+    image: techFirebase,
   },
   {
     name: 'Git',
-    image: techBootstrap,
+    image: techGit,
+  },
+  {
+    name: 'Material-UI',
+    image: techMaterial,
   },
   {
     name: 'Bootstrap',
@@ -146,7 +150,9 @@ export const About = () => {
             {technologies.map((tech) => (
               <Grid key={tech.name} item sm={6} md={2}>
                 <div className="about__technology">
-                  <img className="about__technology-img" alt={tech.name} src={tech.image} />
+                  <Tooltip title={tech.name}>
+                    <img className="about__technology-img" alt={tech.name} src={tech.image} />
+                  </Tooltip>
                 </div>
               </Grid>
             ))}
