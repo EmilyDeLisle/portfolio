@@ -17,9 +17,11 @@ export const App = () => {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <Header handleNavigationClick={handleNavigationClick} />
-      <About/>
-      <ScrollToTopButton handleNavigationClick={handleNavigationClick} />
+      <div className='app'>
+        <Header handleNavigationClick={handleNavigationClick} />
+        <About />
+        <ScrollToTopButton handleNavigationClick={handleNavigationClick} />
+      </div>
     </MuiThemeProvider>
   )
 }
