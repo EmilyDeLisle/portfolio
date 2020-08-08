@@ -24,6 +24,38 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const technologies = [
   {
+    name: 'JavaScript',
+    image: techJS,
+  },
+  {
+    name: 'TypeScript',
+    image: techJS,
+  },
+  {
+    name: 'React',
+    image: techJS,
+  },
+  {
+    name: 'Material-UI',
+    image: techJS,
+  },
+  {
+    name: 'Java',
+    image: techJava,
+  },
+  {
+    name: 'Python',
+    image: techJava,
+  },
+  {
+    name: 'C',
+    image: techHTML,
+  },
+  {
+    name: 'SQL',
+    image: techHTML,
+  },
+  {
     name: 'HTML',
     image: techHTML,
   },
@@ -32,8 +64,12 @@ const technologies = [
     image: techCSS,
   },
   {
-    name: 'JavaScript',
-    image: techJS,
+    name: 'Firebase',
+    image: techBootstrap,
+  },
+  {
+    name: 'Git',
+    image: techBootstrap,
   },
   {
     name: 'Bootstrap',
@@ -48,10 +84,6 @@ const technologies = [
     image: techNodeJS,
   },
   {
-    name: 'Java',
-    image: techJava,
-  },
-  {
     name: 'Photoshop',
     image: techPS,
   },
@@ -62,15 +94,15 @@ export const About = () => {
   return (
     <Section title="About" anchorId="about-anchor">
       <div className="about__contents">
-        <div className="about__photo-text">
-          <div className="about__photo-container">
+        <Grid container spacing={4}>
+          <Grid item sm={12} md={4}>
             <img
               className={`${classes.photo} about__photo`}
               alt="Portrait of Emily"
               src={portrait}
             />
-          </div>
-          <div className="about__text">
+          </Grid>
+          <Grid item sm={12} md={8}>
             <Typography>
               I've taken a meandering path to becoming a developer. I've been a 3D artist, graphic
               designer, cook, illustrator, and most recently, a hospital pharmacy technician.
@@ -107,12 +139,12 @@ export const About = () => {
                 </Typography>
               </li>
             </ul>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
         <div className="about__technologies">
           <Grid container spacing={10}>
             {technologies.map((tech) => (
-              <Grid key={tech.name} item sm={6} md={3}>
+              <Grid key={tech.name} item sm={6} md={2}>
                 <div className="about__technology">
                   <img className="about__technology-img" alt={tech.name} src={tech.image} />
                 </div>

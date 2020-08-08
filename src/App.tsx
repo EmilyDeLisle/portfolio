@@ -1,7 +1,6 @@
 import React, { MouseEvent } from 'react'
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import { About, Header, ScrollToTopButton } from './components'
+import { About, Header, Rule, ScrollToTopButton, Section } from './components'
 import { theme } from './theme'
 
 export const App = () => {
@@ -17,9 +16,17 @@ export const App = () => {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <div className='app'>
+      <div className="app">
         <Header handleNavigationClick={handleNavigationClick} />
         <About />
+        <Rule />
+        <Section title="Projects" anchorId="projects-anchor">
+          Projects
+        </Section>
+        <Rule />
+        <Section title="Contact" anchorId="contact-anchor">
+          Projects
+        </Section>
         <ScrollToTopButton handleNavigationClick={handleNavigationClick} />
       </div>
     </MuiThemeProvider>
