@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(4),
       '&:hover': {
         color: theme.palette.secondary.main,
+        transition: '0.5s',
         cursor: 'pointer',
       },
     },
@@ -45,10 +46,22 @@ export const TopNavBar = ({ handleNavigationClick }: NavigationComponentProps) =
         >
           About
         </Typography>
-        <Typography className={classes.menuItem} variant="h5">
+        <Typography
+          className={classes.menuItem}
+          variant="h5"
+          onClick={(event: React.MouseEvent<HTMLDivElement>) =>
+            handleNavigationClick(event, '#projects-anchor')
+          }
+        >
           Projects
         </Typography>
-        <Typography className={classes.menuItem} variant="h5">
+        <Typography
+          className={classes.menuItem}
+          variant="h5"
+          onClick={(event: React.MouseEvent<HTMLDivElement>) =>
+            handleNavigationClick(event, '#contact-anchor')
+          }
+        >
           Contact
         </Typography>
         <Typography className={classes.menuItem} variant="h5">

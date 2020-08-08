@@ -1,0 +1,37 @@
+.about__contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__photo-text {
+  display: flex;
+}
+
+.about__photo-container {
+  width: 40%;
+}
+
+.about__photo {
+  border-radius: 100%;
+  box-shadow: '2px 2px 4px rgba(0, 0, 0, 0.5)';
+  width: 100%;
+}
+
+.about__text {
+  width: 60%;
+  margin-left: 4em;
+}
+
+.about__technologies {
+  margin-top: 4em;
+}
+
+.about__technology {
+  display: flex;
+  justify-content: center;
+}
+
+.about__technology-img {
+  width: 100%;
+  max-width: 5em;
+}

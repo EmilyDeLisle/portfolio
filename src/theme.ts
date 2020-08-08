@@ -18,4 +18,9 @@ export const theme = createMuiTheme({
       primary: '#ea1e5a',
     },
   },
+  typography: {
+    h3: {
+      fontFamily: 'Leckerli One, cursive'
+    }
+  }
 })
