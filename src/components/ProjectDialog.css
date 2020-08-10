@@ -1,0 +1,19 @@
+.projectDialog__container {
+  background: repeating-linear-gradient(45deg, #323232, #323232 10px, #353535 10px, #353535 20px);
+  border-radius: 4px;
+}
+
+.projectDialog__img-container {
+  padding: 2em;
+}
+
+.projectDialog__img-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectDialog__img {
+  max-width: 80%;
+  margin: 1em;
+}

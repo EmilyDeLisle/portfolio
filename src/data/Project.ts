@@ -31,7 +31,7 @@ export const projects: Project[] = [
     name: 'Plant Pal 2',
     description: 'Description',
     coverImage: plantPal1,
-    images: [plantPal1]
+    images: [plantPal1, medManager, weather]
   },
   {
     name: 'PYCS Database App',
