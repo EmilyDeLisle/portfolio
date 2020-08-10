@@ -9,5 +9,8 @@
 
 .projects__project-img {
   width: 100%;
-  /* max-width: 10em; */
+}
+
+.projects__project-img:hover {
+  cursor: pointer;
 }

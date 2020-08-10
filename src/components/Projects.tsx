@@ -1,13 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid'
-import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
+import { ProjectDialog } from './ProjectDialog'
 import { Section } from './Section'
-
-import medManager from '../assets/medManager.png'
-import plantPal1 from '../assets/plantPal1.png'
-import weather from '../assets/weather.png'
+import { projects } from '../data'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -17,70 +14,38 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-/*
-Projects:
-
-- Plant Pal 2
-- PYCS app
-- Draw
-- Chess
-- Plant Pal 1
-- MedManager
-- Weather
-
-Maybe:
-- Random quote
-- Wikipedia
-- Pokeretriever
-*/
-
-const projects = [
-  {
-    name: 'Plant Pal 2',
-    image: plantPal1,
-  },
-  {
-    name: 'PYCS Database App',
-    image: plantPal1,
-  },
-  {
-    name: 'Draw',
-    image: plantPal1,
-  },
-  {
-    name: 'Chess',
-    image: plantPal1,
-  },
-  {
-    name: 'Plant Pal 1',
-    image: plantPal1,
-  },
-  {
-    name: 'MedManager',
-    image: medManager,
-  },
-  {
-    name: 'Weather App',
-    image: weather,
-  },
-]
-
 export const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(0)
+  const [dialogOpen, setDialogOpen] = useState(false)
+
   const classes = useStyles()
   return (
     <Section title="Projects" anchorId="projects-anchor">
       <div className="projects__container">
         <Grid container spacing={10}>
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <Grid key={project.name} item sm={12} md={6}>
               <div className="projects__project">
-                <img className="projects__project-img" alt={project.name} src={project.image} />
+                <img
+                  className="projects__project-img"
+                  alt={project.name}
+                  src={project.coverImage}
+                  onClick={() => {
+                    setSelectedProject(index)
+                    setDialogOpen(true)
+                  }}
+                />
               </div>
             </Grid>
           ))}
         </Grid>
       </div>
       <Typography align="center">For more projects, check out my GitHub</Typography>
+      <ProjectDialog
+        open={dialogOpen}
+        handleClose={() => setDialogOpen(false)}
+        project={projects[selectedProject]}
+      />
     </Section>
   )
 }
