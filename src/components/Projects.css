@@ -1,0 +1,13 @@
+.projects__container {
+  margin: 4em 0;
+}
+
+.projects__project {
+  display: flex;
+  justify-content: center;
+}
+
+.projects__project-img {
+  width: 100%;
+  /* max-width: 10em; */
+}

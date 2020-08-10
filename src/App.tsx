@@ -1,6 +1,6 @@
 import React, { MouseEvent } from 'react'
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import { About, Header, Rule, ScrollToTopButton, Section } from './components'
+import { About, Header, Projects, Rule, ScrollToTopButton, Section } from './components'
 import { theme } from './theme'
 
 export const App = () => {
@@ -20,12 +20,10 @@ export const App = () => {
         <Header handleNavigationClick={handleNavigationClick} />
         <About />
         <Rule />
-        <Section title="Projects" anchorId="projects-anchor">
-          Projects
-        </Section>
+        <Projects />
         <Rule />
         <Section title="Contact" anchorId="contact-anchor">
-          Projects
+          Contact
         </Section>
         <ScrollToTopButton handleNavigationClick={handleNavigationClick} />
       </div>
