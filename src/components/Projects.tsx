@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid'
+import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
 import { ProjectDialog } from './ProjectDialog'
 import { Section } from './Section'
@@ -15,15 +16,17 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <Grid key={project.name} item sm={12} md={6}>
               <div className="projects__project">
-                <img
-                  className="projects__project-img"
-                  alt={project.name}
-                  src={project.coverImage}
-                  onClick={() => {
-                    setSelectedProject(index)
-                    setDialogOpen(true)
-                  }}
-                />
+                <Tooltip title={project.name}>
+                  <img
+                    className="projects__project-img"
+                    alt={project.name}
+                    src={project.coverImage}
+                    onClick={() => {
+                      setSelectedProject(index)
+                      setDialogOpen(true)
+                    }}
+                  />
+                </Tooltip>
               </div>
             </Grid>
           ))}

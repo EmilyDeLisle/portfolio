@@ -4,6 +4,7 @@ import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import IconButton from '@material-ui/core/IconButton'
+import Link from '@material-ui/core/IconButton'
 import Tooltip from '@material-ui/core/Tooltip'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { useTheme } from '@material-ui/core/styles'
@@ -82,7 +83,11 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
             </Tooltip>
           </div>
         </div>
-        <DialogContent>{description}</DialogContent>
+        <div className="projectDialog__description">
+          <DialogContent>
+            <Typography variant="body2">{description}</Typography>
+          </DialogContent>
+        </div>
         <DialogActions>
           <Button autoFocus onClick={handleClose} color="primary">
             Close

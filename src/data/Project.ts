@@ -107,7 +107,13 @@ export const projects: Project[] = [
   },
   {
     name: 'PYCS Database App',
-    description: 'Description',
+    description: `The Pathfinder Youth Centre Society Database Application was a collaborative student project I worked on alongside four other students for the BCIT Industry-Sponsored Student Project program in term 3 of the Computer Systems Technology program. This project was completed over a five-week period in April-May 2020.
+    
+    Pathfinder is a local non-profit organization that provides mentorship and job training to at-risk young people in the British Columbia Lower Mainland. The goal was to provide Pathfinder with a database that was remotely-accessible accross their three locations. Because Pathfinder was going to store very senstive information like social insurance numbers in this database, the data needed to be secure. We also wanted to come up with a solution that would run on its on and require no maintenance. 
+    
+    Because of these requirements, our team opted to go with storing the data on Firebase Cloud Firestore and secured it with Firebase user authentication. Firebase provided the hosting for the final project. The front end was written in JavaScript with React and Material-UI for the user interface and MobX for state management.
+    
+    The app allows PYCS staff to manage participant records. They can look up, edit, and add notes to records, as well as also create new records. The records keep a detailed history of every change made to them. The app allows sorting and searching of participant records, as well as archiving old records. The app also has a second portal that leads to a web form used by potential participants to enrol themselves into PYCS's database. These new applications appear in a separate section in the database app that staff members can review and either accept or discard.`,
     coverImage: pycs_07,
     images: [
       pycs_01,
@@ -127,25 +133,35 @@ export const projects: Project[] = [
   },
   {
     name: 'Draw',
-    description: 'Description',
+    description: `Draw is an Object-Oriented Programming final project I did in term 2 of the Computer Systems Technology program at BCIT. The goal was to demonstrate all of the principles of OOP practiced throughout the term and create a fully-funtional drawing application using Java and JavaFX. 
+    
+    The program lets the user draw several different shapes, including a freeform polygon shape, in the colour of their choice. The user can also move and delete any shape they have drawn. The application manages a stack of shapes to correctly layer them on top of one another, but also allows the user to click on and move or delete specific shapes.`,
     coverImage: draw_04,
     images: [draw_01, draw_02, draw_03, draw_04],
   },
   {
     name: 'Chess',
-    description: 'Description',
+    description: `Chess is an Object-Oriented Programming project I did in term 2 of the Computer Systems Technology program at BCIT.
+    
+    The goal was to utilize the OOP principles of inheritance, polymorphism, and abstraction to recreate Chess using Java. The secondary goal was to use serialization to enable saving and loading game data, restoring the game to a previously-saved state. The graphical user interface is made using the JavaFX library.`,
     coverImage: chess_03,
     images: [chess_01, chess_02, chess_03, chess_04],
   },
   {
     name: 'Plant Pal 1',
-    description: 'Description',
+    description: `Plant Pal is an app used to manage and store data about houseplants and when they were watered. The user adds plants to their database which then keeps track of the last time the plant was watered as well as calculating the average time between waterings for each plant. The app also uses the Moment and FullCalendar libraries to display plant watering events in a calendar view.
+    
+    The data is stored in a Firebase Realtime Database and is served with Node.js with Express and Firebase Cloud Functions. The front end is created using Bootstrap with functions written with jQuery. The app also uses Firebase user authentication.`,
     coverImage: plantPal1_03,
     images: [plantPal1_01, plantPal1_02, plantPal1_03, plantPal1_04, plantPal1_05, plantPal1_06],
   },
   {
     name: 'MedManager',
-    description: 'Description',
+    description: `MedManager is a collaborative student project worked on by myself and two other students in term 1 of the Computer Systems Technology program at BCIT.
+    
+    MedManager is an app used to manage daily medication dosing. It tracks dosing times for various medications entered by the user and reminds them when they are close to or past a dosing time. It also stores contact information for the user's pharmacy.
+    
+    The app stores its data on Firebase Realtime Database and utilizes Firebase user authentication to secure user information.`,
     coverImage: medManager_03,
     images: [
       medManager_01,
@@ -159,7 +175,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Weather App',
-    description: 'Description',
+    description: `This app displays weather local to the user uses Google Geocoding and Dark Sky APIs. The animated weather icons are SkyCons by Dark Sky. The app is served using Node.js and Express and deployed to Heroku.`,
     coverImage: weather_2,
     images: [weather_1, weather_2],
   },
