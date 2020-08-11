@@ -1,5 +1,3 @@
-import medManager from '../assets/medManager.png'
-
 // MedManager assets
 import medManager_1 from '../assets/projects/medManager/medManager_1.gif'
 import medManager_2 from '../assets/projects/medManager/medManager_2.gif'
@@ -32,7 +30,8 @@ import pycs_11 from '../assets/projects/pycs/pycs_11.png'
 import pycs_12 from '../assets/projects/pycs/pycs_12.png'
 import pycs_13 from '../assets/projects/pycs/pycs_13.png'
 
-import weather from '../assets/weather.png'
+import weather_1 from '../assets/projects/weather/weather_1.gif'
+import weather_2 from '../assets/projects/weather/weather_2.png'
 
 export interface Project {
   name: string
@@ -107,12 +106,20 @@ export const projects: Project[] = [
     name: 'MedManager',
     description: 'Description',
     coverImage: medManager_3,
-    images: [medManager_1, medManager_2, medManager_3, medManager_4, medManager_5, medManager_6, medManager_7],
+    images: [
+      medManager_1,
+      medManager_2,
+      medManager_3,
+      medManager_4,
+      medManager_5,
+      medManager_6,
+      medManager_7,
+    ],
   },
   {
     name: 'Weather App',
     description: 'Description',
-    coverImage: weather,
-    images: [weather],
+    coverImage: weather_2,
+    images: [weather_1, weather_2],
   },
 ]
