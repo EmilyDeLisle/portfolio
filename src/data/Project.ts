@@ -1,5 +1,26 @@
 import medManager from '../assets/medManager.png'
-import plantPal1 from '../assets/plantPal1.png'
+
+import plantPal1_1 from '../assets/projects/plantPal1/plantPal1-1.gif'
+import plantPal1_2 from '../assets/projects/plantPal1/plantPal1-2.gif'
+import plantPal1_3 from '../assets/projects/plantPal1/plantPal1-3.png'
+import plantPal1_4 from '../assets/projects/plantPal1/plantPal1-4.png'
+import plantPal1_5 from '../assets/projects/plantPal1/plantPal1-5.png'
+import plantPal1_6 from '../assets/projects/plantPal1/plantPal1-6.png'
+
+import pycs_01 from '../assets/projects/pycs/pycs_01.gif'
+import pycs_02 from '../assets/projects/pycs/pycs_02.gif'
+import pycs_03 from '../assets/projects/pycs/pycs_03.gif'
+import pycs_04 from '../assets/projects/pycs/pycs_04.gif'
+import pycs_05 from '../assets/projects/pycs/pycs_05.png'
+import pycs_06 from '../assets/projects/pycs/pycs_06.png'
+import pycs_07 from '../assets/projects/pycs/pycs_07.png'
+import pycs_08 from '../assets/projects/pycs/pycs_08.png'
+import pycs_09 from '../assets/projects/pycs/pycs_09.png'
+import pycs_10 from '../assets/projects/pycs/pycs_10.png'
+import pycs_11 from '../assets/projects/pycs/pycs_11.png'
+import pycs_12 from '../assets/projects/pycs/pycs_12.png'
+import pycs_13 from '../assets/projects/pycs/pycs_13.png'
+
 import weather from '../assets/weather.png'
 
 export interface Project {
@@ -30,43 +51,57 @@ export const projects: Project[] = [
   {
     name: 'Plant Pal 2',
     description: 'Description',
-    coverImage: plantPal1,
-    images: [plantPal1, medManager, weather]
+    coverImage: plantPal1_3,
+    images: [plantPal1_2, plantPal1_3, plantPal1_4, plantPal1_5],
   },
   {
     name: 'PYCS Database App',
     description: 'Description',
-    coverImage: plantPal1,
-    images: [plantPal1]
+    coverImage: pycs_07,
+    images: [
+      pycs_01,
+      pycs_02,
+      pycs_03,
+      pycs_04,
+      pycs_05,
+      pycs_06,
+      pycs_07,
+      pycs_08,
+      pycs_09,
+      pycs_10,
+      pycs_11,
+      pycs_12,
+      pycs_13,
+    ],
   },
   {
     name: 'Draw',
     description: 'Description',
-    coverImage: plantPal1,
-    images: [plantPal1]
+    coverImage: plantPal1_3,
+    images: [plantPal1_2],
   },
   {
     name: 'Chess',
     description: 'Description',
-    coverImage: plantPal1,
-    images: [plantPal1]
+    coverImage: plantPal1_3,
+    images: [plantPal1_2],
   },
   {
     name: 'Plant Pal 1',
     description: 'Description',
-    coverImage: plantPal1,
-    images: [plantPal1]
+    coverImage: plantPal1_3,
+    images: [plantPal1_1, plantPal1_2, plantPal1_3, plantPal1_4, plantPal1_5, plantPal1_6],
   },
   {
     name: 'MedManager',
     description: 'Description',
     coverImage: medManager,
-    images: [medManager]
+    images: [medManager],
   },
   {
     name: 'Weather App',
     description: 'Description',
     coverImage: weather,
-    images: [weather]
+    images: [weather],
   },
 ]

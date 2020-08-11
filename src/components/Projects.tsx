@@ -1,24 +1,13 @@
 import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import { ProjectDialog } from './ProjectDialog'
 import { Section } from './Section'
 import { projects } from '../data'
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    photo: {
-      border: `4px solid ${theme.palette.primary.main}`,
-    },
-  })
-)
-
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(0)
   const [dialogOpen, setDialogOpen] = useState(false)
-
-  const classes = useStyles()
   return (
     <Section title="Projects" anchorId="projects-anchor">
       <div className="projects__container">
