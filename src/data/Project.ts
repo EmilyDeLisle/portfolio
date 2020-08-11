@@ -1,19 +1,40 @@
+// Draw assets
+import draw_01 from '../assets/projects/draw/draw_01.gif'
+import draw_02 from '../assets/projects/draw/draw_02.gif'
+import draw_03 from '../assets/projects/draw/draw_03.gif'
+import draw_04 from '../assets/projects/draw/draw_04.png'
+
 // MedManager assets
-import medManager_1 from '../assets/projects/medManager/medManager_1.gif'
-import medManager_2 from '../assets/projects/medManager/medManager_2.gif'
-import medManager_3 from '../assets/projects/medManager/medManager_3.png'
-import medManager_4 from '../assets/projects/medManager/medManager_4.png'
-import medManager_5 from '../assets/projects/medManager/medManager_5.png'
-import medManager_6 from '../assets/projects/medManager/medManager_6.png'
-import medManager_7 from '../assets/projects/medManager/medManager_7.png'
+import medManager_01 from '../assets/projects/medManager/medManager_01.gif'
+import medManager_02 from '../assets/projects/medManager/medManager_02.gif'
+import medManager_03 from '../assets/projects/medManager/medManager_03.png'
+import medManager_04 from '../assets/projects/medManager/medManager_04.png'
+import medManager_05 from '../assets/projects/medManager/medManager_05.png'
+import medManager_06 from '../assets/projects/medManager/medManager_06.png'
+import medManager_07 from '../assets/projects/medManager/medManager_07.png'
 
 // Plant Pal 1 assets
-import plantPal1_1 from '../assets/projects/plantPal1/plantPal1-1.gif'
-import plantPal1_2 from '../assets/projects/plantPal1/plantPal1-2.gif'
-import plantPal1_3 from '../assets/projects/plantPal1/plantPal1-3.png'
-import plantPal1_4 from '../assets/projects/plantPal1/plantPal1-4.png'
-import plantPal1_5 from '../assets/projects/plantPal1/plantPal1-5.png'
-import plantPal1_6 from '../assets/projects/plantPal1/plantPal1-6.png'
+import plantPal1_01 from '../assets/projects/plantPal1/plantPal1_01.gif'
+import plantPal1_02 from '../assets/projects/plantPal1/plantPal1_02.gif'
+import plantPal1_03 from '../assets/projects/plantPal1/plantPal1_03.png'
+import plantPal1_04 from '../assets/projects/plantPal1/plantPal1_04.png'
+import plantPal1_05 from '../assets/projects/plantPal1/plantPal1_05.png'
+import plantPal1_06 from '../assets/projects/plantPal1/plantPal1_06.png'
+
+// Plant Pal 2 assets
+import plantPal2_01 from '../assets/projects/plantPal2/plantPal2_01.gif'
+import plantPal2_02 from '../assets/projects/plantPal2/plantPal2_02.gif'
+import plantPal2_03 from '../assets/projects/plantPal2/plantPal2_03.gif'
+import plantPal2_04 from '../assets/projects/plantPal2/plantPal2_04.gif'
+import plantPal2_05 from '../assets/projects/plantPal2/plantPal2_05.gif'
+import plantPal2_06 from '../assets/projects/plantPal2/plantPal2_06.png'
+import plantPal2_07 from '../assets/projects/plantPal2/plantPal2_07.png'
+import plantPal2_08 from '../assets/projects/plantPal2/plantPal2_08.png'
+import plantPal2_09 from '../assets/projects/plantPal2/plantPal2_09.png'
+import plantPal2_10 from '../assets/projects/plantPal2/plantPal2_10.png'
+import plantPal2_11 from '../assets/projects/plantPal2/plantPal2_11.png'
+import plantPal2_12 from '../assets/projects/plantPal2/plantPal2_12.png'
+import plantPal2_13 from '../assets/projects/plantPal2/plantPal2_13.png'
 
 // PYCS Database App assets
 import pycs_01 from '../assets/projects/pycs/pycs_01.gif'
@@ -61,8 +82,22 @@ export const projects: Project[] = [
   {
     name: 'Plant Pal 2',
     description: 'Description',
-    coverImage: plantPal1_3,
-    images: [plantPal1_2, plantPal1_3, plantPal1_4, plantPal1_5],
+    coverImage: plantPal2_06,
+    images: [
+      plantPal2_01,
+      plantPal2_02,
+      plantPal2_03,
+      plantPal2_04,
+      plantPal2_05,
+      plantPal2_06,
+      plantPal2_07,
+      plantPal2_08,
+      plantPal2_09,
+      plantPal2_10,
+      plantPal2_11,
+      plantPal2_12,
+      plantPal2_13,
+    ],
   },
   {
     name: 'PYCS Database App',
@@ -87,33 +122,47 @@ export const projects: Project[] = [
   {
     name: 'Draw',
     description: 'Description',
-    coverImage: plantPal1_3,
-    images: [plantPal1_2],
+    coverImage: draw_04,
+    images: [draw_01, draw_02, draw_03, draw_04],
   },
   {
     name: 'Chess',
     description: 'Description',
-    coverImage: plantPal1_3,
-    images: [plantPal1_2],
+    coverImage: plantPal2_06,
+    images: [
+      plantPal2_01,
+      plantPal2_02,
+      plantPal2_03,
+      plantPal2_04,
+      plantPal2_05,
+      plantPal2_06,
+      plantPal2_07,
+      plantPal2_08,
+      plantPal2_09,
+      plantPal2_10,
+      plantPal2_11,
+      plantPal2_12,
+      plantPal2_13,
+    ],
   },
   {
     name: 'Plant Pal 1',
     description: 'Description',
-    coverImage: plantPal1_3,
-    images: [plantPal1_1, plantPal1_2, plantPal1_3, plantPal1_4, plantPal1_5, plantPal1_6],
+    coverImage: plantPal1_03,
+    images: [plantPal1_01, plantPal1_02, plantPal1_03, plantPal1_04, plantPal1_05, plantPal1_06],
   },
   {
     name: 'MedManager',
     description: 'Description',
-    coverImage: medManager_3,
+    coverImage: medManager_03,
     images: [
-      medManager_1,
-      medManager_2,
-      medManager_3,
-      medManager_4,
-      medManager_5,
-      medManager_6,
-      medManager_7,
+      medManager_01,
+      medManager_02,
+      medManager_03,
+      medManager_04,
+      medManager_05,
+      medManager_06,
+      medManager_07,
     ],
   },
   {
