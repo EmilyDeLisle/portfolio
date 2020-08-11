@@ -11,6 +11,7 @@ import { useTheme } from '@material-ui/core/styles'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import BackIcon from '@material-ui/icons/ArrowBack'
 import ForwardIcon from '@material-ui/icons/ArrowForward'
+import Markdown, { MarkdownOptions } from 'markdown-to-jsx'
 import { Project } from '../data'
 import { Typography } from '@material-ui/core'
 
@@ -22,6 +23,10 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       margin: theme.spacing(2),
       textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+    },
+    link: {
+      padding: 0,
+      fontSize: 'initial',
     },
   })
 )
@@ -39,6 +44,22 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'))
   const { name, description, images } = project
   const lastImageIndex = images.length - 1
+
+  const markdownOptions: MarkdownOptions = {
+    overrides: {
+      a: {
+        component: Link,
+        props: {
+          target: '_blank',
+          rel: 'noopener',
+          variant: 'body2',
+          color: 'primary',
+          className: classes.link,
+        },
+      },
+      p: { component: Typography, props: { paragraph: true } },
+    },
+  }
 
   const incrementImage = () => {
     if (selectedImage < lastImageIndex) {
@@ -85,7 +106,7 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
         </div>
         <div className="projectDialog__description">
           <DialogContent>
-            <Typography variant="body2">{description}</Typography>
+            <Markdown options={markdownOptions}>{description}</Markdown>
           </DialogContent>
         </div>
         <DialogActions>
