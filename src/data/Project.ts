@@ -1,3 +1,9 @@
+// Chess assets
+import chess_01 from '../assets/projects/chess/chess_01.gif'
+import chess_02 from '../assets/projects/chess/chess_02.gif'
+import chess_03 from '../assets/projects/chess/chess_03.png'
+import chess_04 from '../assets/projects/chess/chess_04.png'
+
 // Draw assets
 import draw_01 from '../assets/projects/draw/draw_01.gif'
 import draw_02 from '../assets/projects/draw/draw_02.gif'
@@ -128,22 +134,8 @@ export const projects: Project[] = [
   {
     name: 'Chess',
     description: 'Description',
-    coverImage: plantPal2_06,
-    images: [
-      plantPal2_01,
-      plantPal2_02,
-      plantPal2_03,
-      plantPal2_04,
-      plantPal2_05,
-      plantPal2_06,
-      plantPal2_07,
-      plantPal2_08,
-      plantPal2_09,
-      plantPal2_10,
-      plantPal2_11,
-      plantPal2_12,
-      plantPal2_13,
-    ],
+    coverImage: chess_03,
+    images: [chess_01, chess_02, chess_03, chess_04],
   },
   {
     name: 'Plant Pal 1',
