@@ -1,5 +1,15 @@
 import medManager from '../assets/medManager.png'
 
+// MedManager assets
+import medManager_1 from '../assets/projects/medManager/medManager_1.gif'
+import medManager_2 from '../assets/projects/medManager/medManager_2.gif'
+import medManager_3 from '../assets/projects/medManager/medManager_3.png'
+import medManager_4 from '../assets/projects/medManager/medManager_4.png'
+import medManager_5 from '../assets/projects/medManager/medManager_5.png'
+import medManager_6 from '../assets/projects/medManager/medManager_6.png'
+import medManager_7 from '../assets/projects/medManager/medManager_7.png'
+
+// Plant Pal 1 assets
 import plantPal1_1 from '../assets/projects/plantPal1/plantPal1-1.gif'
 import plantPal1_2 from '../assets/projects/plantPal1/plantPal1-2.gif'
 import plantPal1_3 from '../assets/projects/plantPal1/plantPal1-3.png'
@@ -7,6 +17,7 @@ import plantPal1_4 from '../assets/projects/plantPal1/plantPal1-4.png'
 import plantPal1_5 from '../assets/projects/plantPal1/plantPal1-5.png'
 import plantPal1_6 from '../assets/projects/plantPal1/plantPal1-6.png'
 
+// PYCS Database App assets
 import pycs_01 from '../assets/projects/pycs/pycs_01.gif'
 import pycs_02 from '../assets/projects/pycs/pycs_02.gif'
 import pycs_03 from '../assets/projects/pycs/pycs_03.gif'
@@ -95,8 +106,8 @@ export const projects: Project[] = [
   {
     name: 'MedManager',
     description: 'Description',
-    coverImage: medManager,
-    images: [medManager],
+    coverImage: medManager_3,
+    images: [medManager_1, medManager_2, medManager_3, medManager_4, medManager_5, medManager_6, medManager_7],
   },
   {
     name: 'Weather App',

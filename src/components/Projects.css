@@ -9,6 +9,8 @@
 
 .projects__project-img {
   width: 100%;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .projects__project-img:hover {
