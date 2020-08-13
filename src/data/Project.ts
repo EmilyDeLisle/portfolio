@@ -66,6 +66,8 @@ export interface Project {
   description: string
   coverImage: string
   images: string[]
+  repo: string
+  url?: string
 }
 
 /*
@@ -90,11 +92,9 @@ export const projects: Project[] = [
     name: 'Plant Pal 2',
     description: `This application is a redesign of my previous JavaScript- and jQuery-based plant watering app, Plant Pal. For this project, I wanted to utilize the skills I'd gained and technologies I've learned thus far in the Computer Systems Technology program at BCIT as well as what I'd learned on my eight-month co-op as a front end engineer.
     
-This version of Plant Pal is completely rebuilt and uses nearly all of the suite of products from Firebase, including Firebase Cloud Firestore, Cloud Functions, user authentication, storage, and hosting. The front end is built in TypeScript using React and Material-UI for the user interface and MobX for state management. Firebase provides the API to interact with the database in Cloud Firestore, and I added a couple cloud functions to do some additional back end work.
+This version of Plant Pal is completely rebuilt and uses almost the entire suite of products from Firebase, including Cloud Firestore, Cloud Functions, user authentication, storage, and hosting. The front end is built in TypeScript using React and Material-UI for the user interface and MobX for state management. Firebase provides the API to interact with the database in Cloud Firestore, and I added a couple cloud functions to do some additional back end work.
 
-Plant Pal now supports searching for plants by name as well as sorting in several different ways. It now prioritizes, by default, plants that require water water based on their specific watering needs, rather than just by time since last watered. Plant Pal now also tracks days when the plant was fertilized as well as when it was watered.
-
-Users can edit a plant's name and/or add an alternate name. They can water or fertilize a plant on any previous day, rather than just the current day, and delete previous watering or fertilizing events. This triggers a recalculation of the plant's average watering interval. Lastly, users can upload images of their plants.
+Plant Pal now supports searching for plants by name as well as sorting in several different ways. It prioritizes, by default, plants that require water water based on their specific watering needs, rather than just by time since last watered. Plant Pal now also tracks days when and how often the the plant is fertilized. Users can also upload images of their plants, as well as edit all the plant's details, including the name, image, and watering and fertlizing events.
 
 The app is fully responsive, and will accept images taken on a user's phone as well as uploaded from their computer.`,
     coverImage: plantPal2_06,
@@ -113,12 +113,14 @@ The app is fully responsive, and will accept images taken on a user's phone as w
       plantPal2_12,
       plantPal2_13,
     ],
+    repo: 'https://github.com/EmilyDeLisle/plant_pal',
+    url: 'https://plant-pal.com',
   },
   {
     name: 'PYCS Database App',
     description: `The Pathfinder Youth Centre Society Database Application was a collaborative student project I worked on alongside four other students for the BCIT Industry-Sponsored Student Project program in term 3 of the Computer Systems Technology program. This project was completed over a five-week period in April-May 2020.
      
-Pathfinder is a local non-profit organization that provides mentorship and job training to at-risk young people in the British Columbia Lower Mainland. The goal was to provide Pathfinder with a database that was remotely-accessible accross their three locations. Because Pathfinder was going to store very senstive information like social insurance numbers in this database, the data needed to be secure. We also wanted to come up with a solution that would run on its on and require no maintenance. 
+[Pathfinder Youth Centre Society](https://www.canadahelps.org/en/charities/pathfinder-youth-centre-society/) is a local non-profit organization that provides mentorship and job training to at-risk young people in the British Columbia Lower Mainland. The goal was to provide Pathfinder with a database that was remotely-accessible accross their three locations. Because Pathfinder was going to store very senstive information like social insurance numbers in this database, the data needed to be secure. We also wanted to come up with a solution that would run on its on and require no maintenance. 
      
 Because of these requirements, our team opted to go with storing the data on Firebase Cloud Firestore and secured it with Firebase user authentication. Firebase provided the hosting for the final project. The front end was written in JavaScript with React and Material-UI for the user interface and MobX for state management.
      
@@ -141,6 +143,7 @@ This project was featured in July 2020 in [BCIT News](https://commons.bcit.ca/ne
       pycs_12,
       pycs_13,
     ],
+    repo: 'https://github.com/EmilyDeLisle/pycs_database',
   },
   {
     name: 'Draw',
@@ -149,6 +152,7 @@ This project was featured in July 2020 in [BCIT News](https://commons.bcit.ca/ne
 The program lets the user draw several different shapes, including a freeform polygon shape, in the colour of their choice. The user can also move and delete any shape they have drawn. The application manages a stack of shapes to correctly layer them on top of one another, but also allows the user to click on and move or delete specific shapes.`,
     coverImage: draw_04,
     images: [draw_01, draw_02, draw_03, draw_04],
+    repo: 'https://github.com/EmilyDeLisle/draw',
   },
   {
     name: 'Chess',
@@ -157,6 +161,7 @@ The program lets the user draw several different shapes, including a freeform po
 The goal was to utilize the OOP principles of inheritance, polymorphism, and abstraction to recreate Chess using Java. The secondary goal was to use serialization to enable saving and loading game data, restoring the game to a previously-saved state. The graphical user interface is made using the JavaFX library.`,
     coverImage: chess_03,
     images: [chess_01, chess_02, chess_03, chess_04],
+    repo: 'https://github.com/EmilyDeLisle/chess',
   },
   {
     name: 'Plant Pal 1',
@@ -165,6 +170,8 @@ The goal was to utilize the OOP principles of inheritance, polymorphism, and abs
 The data is stored in a Firebase Realtime Database and is served with Node.js with Express and Firebase Cloud Functions. The front end is created using Bootstrap with functions written with jQuery. The app also uses Firebase user authentication.`,
     coverImage: plantPal1_03,
     images: [plantPal1_01, plantPal1_02, plantPal1_03, plantPal1_04, plantPal1_05, plantPal1_06],
+    repo: 'https://github.com/EmilyDeLisle/PlantPal_v1',
+    url: 'https://plant-pal-ae41e.firebaseapp.com/',
   },
   {
     name: 'MedManager',
@@ -183,11 +190,15 @@ The app stores its data on Firebase Realtime Database and utilizes Firebase user
       medManager_06,
       medManager_07,
     ],
+    repo: 'https://github.com/CiaraSouthgate/MedManager',
+    url: 'https://medmanager-9a443.firebaseapp.com/',
   },
   {
     name: 'Weather App',
     description: `This app displays weather local to the user uses Google Geocoding and Dark Sky APIs. The animated weather icons are SkyCons by Dark Sky. The app is served using Node.js and Express and deployed to Heroku.`,
     coverImage: weather_2,
     images: [weather_1, weather_2],
+    repo: 'https://github.com/EmilyDeLisle/Weather',
+    url: 'https://mle-weather.herokuapp.com/',
   },
 ]

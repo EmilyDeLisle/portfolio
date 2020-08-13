@@ -11,6 +11,8 @@ import { useTheme } from '@material-ui/core/styles'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import BackIcon from '@material-ui/icons/ArrowBack'
 import ForwardIcon from '@material-ui/icons/ArrowForward'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import LaunchIcon from '@material-ui/icons/Launch'
 import Markdown, { MarkdownOptions } from 'markdown-to-jsx'
 import { Project } from '../data'
 import { Typography } from '@material-ui/core'
@@ -42,7 +44,7 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
   const classes = useStyles()
   const theme = useTheme()
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'))
-  const { name, description, images } = project
+  const { name, description, images, repo, url } = project
   const lastImageIndex = images.length - 1
 
   const markdownOptions: MarkdownOptions = {
@@ -71,6 +73,10 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
     if (selectedImage > 0) {
       setSelectedImage(selectedImage - 1)
     }
+  }
+
+  const visitURL = (url: string) => {
+    window.open(url, '_blank')
   }
 
   return (
@@ -110,7 +116,26 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
           </DialogContent>
         </div>
         <DialogActions>
-          <Button autoFocus onClick={handleClose} color="primary">
+          {!!url && (
+            <Tooltip title="Launch app" placement='top'>
+              <IconButton color="primary" onClick={() => visitURL(url)}>
+                <LaunchIcon />
+              </IconButton>
+            </Tooltip>
+          )}
+          <Tooltip title="View code" placement='top'>
+            <IconButton color="primary" onClick={() => visitURL(repo)}>
+              <GitHubIcon />
+            </IconButton>
+          </Tooltip>
+          <Button
+            autoFocus
+            onClick={() => {
+              setSelectedImage(0)
+              handleClose()
+            }}
+            color="primary"
+          >
             Close
           </Button>
         </DialogActions>

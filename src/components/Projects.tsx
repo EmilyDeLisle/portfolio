@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid'
+import Link from '@material-ui/core/Link'
 import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
 import { ProjectDialog } from './ProjectDialog'
@@ -32,7 +33,13 @@ export const Projects = () => {
           ))}
         </Grid>
       </div>
-      <Typography align="center">For more projects, check out my GitHub</Typography>
+      <Typography align="center">
+        For more projects, check out my{' '}
+        <Link href="https://github.com/EmilyDeLisle" target="_blank" rel="noopener">
+          GitHub
+        </Link>
+        .
+      </Typography>
       <ProjectDialog
         open={dialogOpen}
         handleClose={() => setDialogOpen(false)}
