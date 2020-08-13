@@ -1,6 +1,6 @@
-import React, { MouseEvent } from 'react'
+import React from 'react'
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import { About, Header, Projects, Rule, ScrollToTopButton, Section } from './components'
+import { About, Contact, Header, Projects, Rule, ScrollToTopButton, Section } from './components'
 import { theme } from './theme'
 
 export const App = () => {
@@ -25,9 +25,7 @@ export const App = () => {
         <Rule />
         <Projects />
         <Rule />
-        <Section title="Contact" anchorId="contact-anchor">
-          Contact
-        </Section>
+        <Contact/>
         <ScrollToTopButton handleNavigationClick={handleNavigationClick} />
       </div>
     </MuiThemeProvider>

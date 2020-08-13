@@ -33,7 +33,7 @@ export const Projects = () => {
           ))}
         </Grid>
       </div>
-      <Typography align="center">
+      <Typography variant='h6' align="center">
         For more projects, check out my{' '}
         <Link href="https://github.com/EmilyDeLisle" target="_blank" rel="noopener">
           GitHub
