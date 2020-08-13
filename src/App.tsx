@@ -1,10 +1,13 @@
-import React, { MouseEvent } from 'react'
+import React from 'react'
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import { About, Header, Rule, ScrollToTopButton, Section } from './components'
+import { About, Contact, Header, Projects, Rule, ScrollToTopButton, Section } from './components'
 import { theme } from './theme'
 
 export const App = () => {
-  const handleNavigationClick = (event: MouseEvent<HTMLDivElement>, anchorId: string) => {
+  const handleNavigationClick = (
+    event: React.MouseEvent<HTMLDivElement | HTMLButtonElement | HTMLLIElement>,
+    anchorId: string
+  ) => {
     const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(
       anchorId
     )
@@ -20,13 +23,9 @@ export const App = () => {
         <Header handleNavigationClick={handleNavigationClick} />
         <About />
         <Rule />
-        <Section title="Projects" anchorId="projects-anchor">
-          Projects
-        </Section>
+        <Projects />
         <Rule />
-        <Section title="Contact" anchorId="contact-anchor">
-          Projects
-        </Section>
+        <Contact/>
         <ScrollToTopButton handleNavigationClick={handleNavigationClick} />
       </div>
     </MuiThemeProvider>
