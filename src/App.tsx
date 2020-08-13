@@ -4,7 +4,10 @@ import { About, Header, Projects, Rule, ScrollToTopButton, Section } from './com
 import { theme } from './theme'
 
 export const App = () => {
-  const handleNavigationClick = (event: MouseEvent<HTMLDivElement>, anchorId: string) => {
+  const handleNavigationClick = (
+    event: React.MouseEvent<HTMLDivElement | HTMLButtonElement | HTMLLIElement>,
+    anchorId: string
+  ) => {
     const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(
       anchorId
     )

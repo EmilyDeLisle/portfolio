@@ -4,6 +4,7 @@ import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import IconButton from '@material-ui/core/IconButton'
+import Hidden from '@material-ui/core/Hidden'
 import Link from '@material-ui/core/IconButton'
 import Tooltip from '@material-ui/core/Tooltip'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
@@ -86,19 +87,42 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
           {name}
         </Typography>
         <div className="projectDialog__img-container">
-          <div className="projectDialog__img-carousel">
-            <Tooltip title="Previous image">
-              <span>
+
+          <Hidden smDown>
+            <div className="projectDialog__img-carousel">
+              <Tooltip title="Previous image">
+                <span>
+                  <IconButton
+                    color="inherit"
+                    disabled={selectedImage === 0}
+                    onClick={decrementImage}
+                  >
+                    <BackIcon />
+                  </IconButton>
+                </span>
+              </Tooltip>
+              <img className="projectDialog__img" alt={name} src={images[selectedImage]} />
+              <Tooltip title="Next image">
+                <span>
+                  <IconButton
+                    color="inherit"
+                    disabled={selectedImage === lastImageIndex}
+                    onClick={incrementImage}
+                  >
+                    <ForwardIcon />
+                  </IconButton>
+                </span>
+              </Tooltip>
+            </div>
+          </Hidden>
+
+          <Hidden mdUp>
+            <div className="projectDialog__img-carousel-mobile">
+              <img className="projectDialog__img" alt={name} src={images[selectedImage]} />
+              <div>
                 <IconButton color="inherit" disabled={selectedImage === 0} onClick={decrementImage}>
                   <BackIcon />
                 </IconButton>
-              </span>
-            </Tooltip>
-
-            <img className="projectDialog__img" alt={name} src={images[selectedImage]} />
-
-            <Tooltip title="Next image">
-              <span>
                 <IconButton
                   color="inherit"
                   disabled={selectedImage === lastImageIndex}
@@ -106,9 +130,9 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
                 >
                   <ForwardIcon />
                 </IconButton>
-              </span>
-            </Tooltip>
-          </div>
+              </div>
+            </div>
+          </Hidden>
         </div>
         <div className="projectDialog__description">
           <DialogContent>
@@ -117,13 +141,13 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
         </div>
         <DialogActions>
           {!!url && (
-            <Tooltip title="Launch app" placement='top'>
+            <Tooltip title="Launch app" placement="top">
               <IconButton color="primary" onClick={() => visitURL(url)}>
                 <LaunchIcon />
               </IconButton>
             </Tooltip>
           )}
-          <Tooltip title="View code" placement='top'>
+          <Tooltip title="View code" placement="top">
             <IconButton color="primary" onClick={() => visitURL(repo)}>
               <GitHubIcon />
             </IconButton>

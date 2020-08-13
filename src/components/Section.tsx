@@ -22,7 +22,8 @@ interface SectionProps {
 export const Section = ({ children, title, anchorId }: SectionProps) => {
   const classes = useStyles()
   return (
-    <section id={anchorId} className={`${classes.root} section`}>
+    <section className={`${classes.root} section`}>
+      <span id={anchorId}/>
       <Typography className={classes.title} variant="h3" color="primary" gutterBottom>
         {title}
       </Typography>
