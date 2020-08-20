@@ -2,7 +2,8 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
+import { makeStyles, Theme, createStyles, useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { Section } from './Section'
 import portrait from '../assets/portrait.jpg'
 
@@ -95,6 +96,7 @@ const technologies = [
 
 export const About = () => {
   const classes = useStyles()
+  const fullScreen = useMediaQuery(useTheme().breakpoints.down('sm'))
   return (
     <Section title="About" anchorId="about-anchor">
       <Grid container spacing={4}>
@@ -141,7 +143,7 @@ export const About = () => {
         </Grid>
       </Grid>
       <div className="about__technologies">
-        <Grid container spacing={10}>
+        <Grid container justify='center' spacing={fullScreen ? 2 : 10}>
           {technologies.map((tech) => (
             <Grid key={tech.name} item sm={6} md={2}>
               <div className="about__technology">

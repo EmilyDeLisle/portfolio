@@ -17,3 +17,10 @@
 .projects__project-img:hover {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+  .projects__project {
+    display: initial;
+    justify-content: initial;
+  }
+}

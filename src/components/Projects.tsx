@@ -13,10 +13,10 @@ export const Projects = () => {
   return (
     <Section title="Projects" anchorId="projects-anchor">
       <div className="projects__container">
-        <Grid container spacing={10}>
+        <Grid container justify="center" spacing={10}>
           {projects.map((project, index) => (
             <Grid key={project.name} item sm={12} md={6}>
-              <div className="projects__project">
+              <div className='projects__project'>
                 <Tooltip title={project.name}>
                   <img
                     className="projects__project-img"
@@ -33,7 +33,7 @@ export const Projects = () => {
           ))}
         </Grid>
       </div>
-      <Typography variant='h6' align="center">
+      <Typography variant="h6" align="center">
         For more projects, check out my{' '}
         <Link href="https://github.com/EmilyDeLisle" target="_blank" rel="noopener">
           GitHub

@@ -7,9 +7,8 @@ import IconButton from '@material-ui/core/IconButton'
 import Hidden from '@material-ui/core/Hidden'
 import Link from '@material-ui/core/IconButton'
 import Tooltip from '@material-ui/core/Tooltip'
+import { makeStyles, Theme, createStyles, useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { useTheme } from '@material-ui/core/styles'
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import BackIcon from '@material-ui/icons/ArrowBack'
 import ForwardIcon from '@material-ui/icons/ArrowForward'
 import GitHubIcon from '@material-ui/icons/GitHub'
@@ -43,8 +42,7 @@ interface ProjectDialogProps {
 export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps) => {
   const [selectedImage, setSelectedImage] = useState(0)
   const classes = useStyles()
-  const theme = useTheme()
-  const fullScreen = useMediaQuery(theme.breakpoints.down('sm'))
+  const fullScreen = useMediaQuery(useTheme().breakpoints.down('sm'))
   const { name, description, images, repo, url } = project
   const lastImageIndex = images.length - 1
 

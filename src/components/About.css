@@ -29,4 +29,5 @@
 .about__technology-img {
   width: 100%;
   max-width: 5em;
+  max-height: 5em;
 }

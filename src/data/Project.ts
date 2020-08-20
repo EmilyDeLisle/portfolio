@@ -70,31 +70,14 @@ export interface Project {
   url?: string
 }
 
-/*
-Projects:
-
-- Plant Pal 2
-- PYCS app
-- Draw
-- Chess
-- Plant Pal 1
-- MedManager
-- Weather
-
-Maybe:
-- Random quote
-- Wikipedia
-- Pokeretriever
-*/
-
 export const projects: Project[] = [
   {
     name: 'Plant Pal 2',
-    description: `This application is a redesign of my previous JavaScript- and jQuery-based plant watering app, Plant Pal. For this project, I wanted to utilize the skills I'd gained and technologies I've learned thus far in the Computer Systems Technology program at BCIT as well as what I'd learned on my eight-month co-op as a front end engineer.
+    description: `This application is a redesign of my previous JavaScript- and jQuery-based plant watering app, Plant Pal. For this project, I wanted to utilize the skills I'd gained and technologies I've learned thus far in the Computer Systems Technology program at BCIT as well as what I'd learned on my eight-month co-op as a front end engineer at Grow Technologies (acquired by ATB Financial).
     
 This version of Plant Pal is completely rebuilt and uses almost the entire suite of products from Firebase, including Cloud Firestore, Cloud Functions, user authentication, storage, and hosting. The front end is built in TypeScript using React and Material-UI for the user interface and MobX for state management. Firebase provides the API to interact with the database in Cloud Firestore, and I added a couple cloud functions to do some additional back end work.
 
-Plant Pal now supports searching for plants by name as well as sorting in several different ways. It prioritizes, by default, plants that require water water based on their specific watering needs, rather than just by time since last watered. Plant Pal now also tracks days when and how often the the plant is fertilized. Users can also upload images of their plants, as well as edit all the plant's details, including the name, image, and watering and fertlizing events.
+Plant Pal now supports searching for plants by name as well as sorting in several different ways. It prioritizes, by default, plants that require water based on their specific watering needs, rather than just by time since last watered. On top of watering tracking, Plant Pal now tracks how often the the plant is fertilized. Users can upload images of their plants, as well as edit all the plant's details, including the name, image, and watering and fertlizing events.
 
 The app is fully responsive, and will accept images taken on a user's phone as well as uploaded from their computer.`,
     coverImage: plantPal2_06,
@@ -124,7 +107,7 @@ The app is fully responsive, and will accept images taken on a user's phone as w
      
 Because of these requirements, our team opted to go with storing the data on Firebase Cloud Firestore and secured it with Firebase user authentication. Firebase provided the hosting for the final project. The front end was written in JavaScript with React and Material-UI for the user interface and MobX for state management.
      
-The app allows PYCS staff to manage participant records. They can look up, edit, and add notes to records, as well as also create new records. The records keep a detailed history of every change made to them. The app allows sorting and searching of participant records, as well as archiving old records. The app also has a second portal that leads to a web form used by potential participants to enrol themselves into PYCS's database. These new applications appear in a separate section in the database app that staff members can review and either accept or discard.
+The app allows PYCS staff to manage participant records. They can create, look up, edit, and add notes to records. The records keep a detailed history of every change made to them. The app allows sorting and searching of participant records, as well as archiving old records. The app also has a second portal that leads to a web form used by potential participants to enrol themselves into PYCS's database. These new applications appear in a separate section in the database app that staff members can review and either accept or discard.
      
 This project was featured in July 2020 in [BCIT News](https://commons.bcit.ca/news/2020/07/issp-pathfinder-youth-centre-society/).`,
     coverImage: pycs_07,
