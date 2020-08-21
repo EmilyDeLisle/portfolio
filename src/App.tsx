@@ -14,7 +14,7 @@ export const App = () => {
     )
 
     if (anchor) {
-      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
 
@@ -28,7 +28,6 @@ export const App = () => {
         <Projects />
         <Rule />
         <Contact />
-        <Typography color='inherit' align='center'>© Emily DeLisle</Typography>
         <ScrollToTopButton handleNavigationClick={handleNavigationClick} />
       </div>
     </MuiThemeProvider>

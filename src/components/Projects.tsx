@@ -12,34 +12,45 @@ export const Projects = () => {
   const [dialogOpen, setDialogOpen] = useState(false)
   return (
     <Section title="Projects" anchorId="projects-anchor">
-      <div className="projects__container">
-        <Grid container justify="center" spacing={10}>
-          {projects.map((project, index) => (
-            <Grid key={project.name} item sm={12} md={6}>
-              <div className='projects__project'>
-                <Tooltip title={project.name}>
-                  <img
-                    className="projects__project-img"
-                    alt={project.name}
-                    src={project.coverImage}
-                    onClick={() => {
-                      setSelectedProject(index)
-                      setDialogOpen(true)
-                    }}
-                  />
-                </Tooltip>
-              </div>
-            </Grid>
-          ))}
-        </Grid>
-      </div>
-      <Typography variant="h6" align="center">
+      <Typography gutterBottom>
+        Here are some of my favourite projects that I've worked on. They're projects I worked on as
+        part of the CST program, self-learning through freeCodeCamp, or personal projects I've done
+        on my own.
+      </Typography>
+      <Typography gutterBottom>
+        Click on a project to see more images, some animations, as well as read more in-depth
+        information about it.
+      </Typography>
+      <Typography gutterBottom>
         For more projects, check out my{' '}
         <Link href="https://github.com/EmilyDeLisle" target="_blank" rel="noopener">
           GitHub
         </Link>
         .
       </Typography>
+      <div className="projects__container">
+        <Grid container justify="center" spacing={10}>
+          {projects.map((project, index) => {
+            const { name, coverImage } = project
+            return (
+              <Grid key={name} item sm={12} md={6}>
+                <div className="projects__project">
+                  <div
+                    className="projects__project-box"
+                    onClick={() => {
+                      setSelectedProject(index)
+                      setDialogOpen(true)
+                    }}
+                  >
+                    <img className="projects__project-img" alt={name} src={coverImage} />
+                    <Typography align="center">{name}</Typography>
+                  </div>
+                </div>
+              </Grid>
+            )
+          })}
+        </Grid>
+      </div>
       <ProjectDialog
         open={dialogOpen}
         handleClose={() => setDialogOpen(false)}

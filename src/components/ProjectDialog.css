@@ -2,6 +2,16 @@
   background: repeating-linear-gradient(45deg, #323232, #323232 10px, #353535 10px, #353535 20px);
 }
 
+.projectDialog__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectDialog__controls {
+  display: flex;
+  padding: 0.5em 0.5em 0 0;
+}
+
 .projectDialog__img-container {
   padding: 2em;
 }
@@ -27,8 +37,31 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.projectDialog__img-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectDialog__mobile-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.projectDialog__description {
+  padding: 0 3em;
+}
+
 @media only screen and (max-width: 600px) {
   .projectDialog__img-container {
     padding: 0;
+  }
+
+  .projectDialog__description {
+    padding: 0;
+  }
+
+  .projectDialog__controls {
+    flex-direction: column-reverse;
   }
 }

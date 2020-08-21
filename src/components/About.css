@@ -1,9 +1,6 @@
-.about__photo-text {
-  display: flex;
-}
-
-.about__photo-container {
-  width: 40%;
+.about__me {
+  padding-top: 1em;
+  white-space: pre-wrap;
 }
 
 .about__photo {
@@ -12,9 +9,8 @@
   width: 100%;
 }
 
-.about__text {
-  width: 60%;
-  margin-left: 4em;
+.about__griffin {
+  max-width: 10em;
 }
 
 .about__technologies {
