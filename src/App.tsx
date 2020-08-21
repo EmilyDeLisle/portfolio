@@ -1,6 +1,7 @@
 import React from 'react'
+import Typography from '@material-ui/core/Typography'
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import { About, Contact, Header, Projects, Rule, ScrollToTopButton, Section } from './components'
+import { About, Contact, Header, Projects, Rule, ScrollToTopButton, TopNavBar } from './components'
 import { theme } from './theme'
 
 export const App = () => {
@@ -20,12 +21,14 @@ export const App = () => {
   return (
     <MuiThemeProvider theme={theme}>
       <div className="app">
+        <TopNavBar handleNavigationClick={handleNavigationClick} />
         <Header handleNavigationClick={handleNavigationClick} />
         <About />
         <Rule />
         <Projects />
         <Rule />
-        <Contact/>
+        <Contact />
+        <Typography color='inherit' align='center'>© Emily DeLisle</Typography>
         <ScrollToTopButton handleNavigationClick={handleNavigationClick} />
       </div>
     </MuiThemeProvider>
