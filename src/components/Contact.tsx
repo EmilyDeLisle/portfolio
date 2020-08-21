@@ -1,28 +1,26 @@
 import React from 'react'
-import IconButton from '@material-ui/core/IconButton'
+import Grid from '@material-ui/core/Grid'
 import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
-import MailIcon from '@material-ui/icons/Mail'
+import { makeStyles, Theme, createStyles, useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { Section } from './Section'
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    photo: {
+      border: `4px solid ${theme.palette.primary.main}`,
+    },
+  })
+)
+
+
 export const Contact = () => {
+  const classes = useStyles()
+  const fullScreen = useMediaQuery(useTheme().breakpoints.down('sm'))
   return (
-    <Section title="Contact" anchorId="contact-anchor">
-      <div className="contact__container">
-        <Typography variant="h5" gutterBottom>
-          Want to chat? Email me!
-        </Typography>
-        <Tooltip title="Send me an email!">
-          <IconButton
-            color="inherit"
-            onClick={() => {
-              window.open('mailto:emily.delisle@gmail.com', '_blank')
-            }}
-          >
-            <MailIcon />
-          </IconButton>
-        </Tooltip>
-      </div>
+    <Section title="Let's chat!" anchorId="contact-anchor">
+      Contact
     </Section>
   )
 }

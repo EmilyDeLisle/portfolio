@@ -3,7 +3,6 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import { NavigationComponentProps } from './NavigationComponent'
-import { TopNavBar } from './TopNavBar'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,7 +24,6 @@ export const Header = ({ handleNavigationClick }: NavigationComponentProps) => {
   const classes = useStyles()
   return (
     <div className={`${classes.header} ${classes.text} header`}>
-      <TopNavBar handleNavigationClick={handleNavigationClick} />
       <Toolbar id="back-to-top-anchor" />
       <div className="header__contents">
         <div>
