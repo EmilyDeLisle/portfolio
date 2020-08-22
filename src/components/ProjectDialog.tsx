@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
-import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import IconButton from '@material-ui/core/IconButton'
 import Hidden from '@material-ui/core/Hidden'
@@ -10,9 +8,11 @@ import Tooltip from '@material-ui/core/Tooltip'
 import { makeStyles, Theme, createStyles, useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import BackIcon from '@material-ui/icons/ArrowBack'
+import CancelIcon from '@material-ui/icons/Cancel'
 import ForwardIcon from '@material-ui/icons/ArrowForward'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
+import MoreIcon from '@material-ui/icons/MoreHoriz'
 import Markdown, { MarkdownOptions } from 'markdown-to-jsx'
 import { Project } from '../data'
 import { Typography } from '@material-ui/core'
@@ -58,7 +58,7 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
           className: classes.link,
         },
       },
-      p: { component: Typography, props: { paragraph: true } },
+      p: { component: Typography, props: { paragraph: true, variant: 'body2' } },
     },
   }
 
@@ -79,13 +79,43 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
   }
 
   return (
-    <Dialog fullScreen={fullScreen} open={open} fullWidth maxWidth="lg" onClose={handleClose}>
+    <Dialog fullScreen={fullScreen} open={open} fullWidth maxWidth="md" onClose={handleClose}>
       <div className={`${classes.root} projectDialog__container`}>
-        <Typography className={classes.title} variant="h3" color="primary">
-          {name}
-        </Typography>
-        <div className="projectDialog__img-container">
+        <div className="projectDialog__top">
+          <Typography className={classes.title} variant="h3" color="primary">
+            {name}
+          </Typography>
+          <div>
+            <div className="projectDialog__controls">
+              {!!url && (
+                <Tooltip title="Launch app">
+                  <IconButton color="primary" size='small' onClick={() => visitURL(url)}>
+                    <LaunchIcon />
+                  </IconButton>
+                </Tooltip>
+              )}
+              <Tooltip title="View code">
+                <IconButton color="primary" size='small' onClick={() => visitURL(repo)}>
+                  <GitHubIcon />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Close">
+                <IconButton
+                  color="primary"
+                  size='small'
+                  onClick={() => {
+                    setSelectedImage(0)
+                    handleClose()
+                  }}
+                >
+                  <CancelIcon />
+                </IconButton>
+              </Tooltip>
+            </div>
+          </div>
+        </div>
 
+        <div className="projectDialog__img-container">
           <Hidden smDown>
             <div className="projectDialog__img-carousel">
               <Tooltip title="Previous image">
@@ -99,7 +129,10 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
                   </IconButton>
                 </span>
               </Tooltip>
-              <img className="projectDialog__img" alt={name} src={images[selectedImage]} />
+              <div className="projectDialog__img-icon">
+                <img className="projectDialog__img" alt={name} src={images[selectedImage]} />
+                <MoreIcon />
+              </div>
               <Tooltip title="Next image">
                 <span>
                   <IconButton
@@ -117,10 +150,11 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
           <Hidden mdUp>
             <div className="projectDialog__img-carousel-mobile">
               <img className="projectDialog__img" alt={name} src={images[selectedImage]} />
-              <div>
+              <div className="projectDialog__mobile-buttons">
                 <IconButton color="inherit" disabled={selectedImage === 0} onClick={decrementImage}>
                   <BackIcon />
                 </IconButton>
+                <MoreIcon />
                 <IconButton
                   color="inherit"
                   disabled={selectedImage === lastImageIndex}
@@ -137,30 +171,6 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
             <Markdown options={markdownOptions}>{description}</Markdown>
           </DialogContent>
         </div>
-        <DialogActions>
-          {!!url && (
-            <Tooltip title="Launch app" placement="top">
-              <IconButton color="primary" onClick={() => visitURL(url)}>
-                <LaunchIcon />
-              </IconButton>
-            </Tooltip>
-          )}
-          <Tooltip title="View code" placement="top">
-            <IconButton color="primary" onClick={() => visitURL(repo)}>
-              <GitHubIcon />
-            </IconButton>
-          </Tooltip>
-          <Button
-            autoFocus
-            onClick={() => {
-              setSelectedImage(0)
-              handleClose()
-            }}
-            color="primary"
-          >
-            Close
-          </Button>
-        </DialogActions>
       </div>
     </Dialog>
   )

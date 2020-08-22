@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     text: {
       fontWeight: 500,
-      textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8)',
+      textShadow: '2px 2px 6px rgba(0, 0, 0, 1)',
     },
     name: {
       fontFamily: 'Leckerli One, cursive',
@@ -27,13 +27,15 @@ export const Header = ({ handleNavigationClick }: NavigationComponentProps) => {
       <Toolbar id="back-to-top-anchor" />
       <div className="header__contents">
         <div>
-          <Typography className={classes.text} variant="h1" gutterBottom>
+          <Typography className={classes.text} variant="h1">
             Hi! I'm <span className={classes.name}>Emily DeLisle</span>.
           </Typography>
-          <Typography className={classes.text} variant="h5">
-            I'm a (soon-to-be) new graduate of the Computer Systems Technology program at the
-            British Columbia Institute of Technology. I'm currently seeking a job as a software
-            developer.
+          <Typography className={classes.text} variant="h5" gutterBottom>
+            Software Engineer | Illustrator | Plant-Whisperer | Bird-Tamer
+          </Typography>
+          <Typography className={classes.text} variant="h6">
+            I'm also a (soon-to-be) new grad of the Computer Systems Technology program at the
+            British Columbia Institute of Technology.
           </Typography>
         </div>
       </div>

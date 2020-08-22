@@ -5,6 +5,7 @@
   -o-background-size: cover;
   background-size: cover;
   height: 100vh;
+  
 }
 
 .header__contents {
@@ -13,4 +14,5 @@
   align-items: center;
   justify-content: center;
   padding: 0 15%;
+  box-shadow: 2px 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
