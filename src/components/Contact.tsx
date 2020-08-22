@@ -1,12 +1,8 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
-import { makeStyles, Theme, createStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import GitHubIcon from '@material-ui/icons/GitHub'
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import MailIcon from '@material-ui/icons/Mail'
-import MoreIcon from '@material-ui/icons/MoreVert'
 import TelegramIcon from '@material-ui/icons/Telegram'
 import { Section } from './Section'
 
@@ -27,7 +23,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const Contact = () => {
   const classes = useStyles()
-  const fullScreen = useMediaQuery(useTheme().breakpoints.down('sm'))
   return (
     <Section title="Let's chat!" anchorId="contact-anchor">
       <Typography gutterBottom>

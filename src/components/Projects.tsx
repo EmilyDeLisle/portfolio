@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Link from '@material-ui/core/Link'
-import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
 import { ProjectDialog } from './ProjectDialog'
 import { Section } from './Section'
