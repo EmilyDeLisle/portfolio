@@ -66,7 +66,7 @@ import weather_2 from '../assets/projects/weather/weather_2.png'
 export const projects: Project[] = [
   {
     name: 'Plant Pal 2',
-    description: `This application is a redesign of my previous JavaScript- and jQuery-based plant watering app, Plant Pal. For this project, I wanted to utilize the skills I'd gained and technologies I've learned thus far in the Computer Systems Technology program at BCIT as well as what I'd learned on my eight-month co-op as a front end engineer at Grow Technologies (acquired by ATB Financial).
+    description: `This application is a redesign of my previous JavaScript- and jQuery-based plant watering app, Plant Pal. For this project, I wanted to utilize the skills I'd gained and technologies I've learned thus far in the Computer Systems Technology program at BCIT as well as what I'd learned on my eight-month co-op as a front end engineer at [Grow Technologies](https://www.linkedin.com/company/poweredbygrow) (acquired by [ATB Financial](https://www.atb.com/)).
     
 This version of Plant Pal is completely rebuilt and uses almost the entire suite of products from Firebase, including Cloud Firestore, Cloud Functions, user authentication, storage, and hosting. The front end is built in TypeScript using React and Material-UI for the user interface and MobX for state management. Firebase provides the API to interact with the database in Cloud Firestore, and I added a couple cloud functions to do some additional back end work.
 
