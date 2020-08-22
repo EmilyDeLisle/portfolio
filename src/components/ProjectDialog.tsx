@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     link: {
       padding: 0,
-      fontSize: 'initial',
+      fontSize: 'inherit',
+      marginTop: '-4px',
     },
   })
 )
