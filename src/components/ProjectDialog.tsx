@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
     link: {
       padding: 0,
       fontSize: 'initial',
+      marginTop: '-4px',
     },
   })
 )
@@ -82,7 +83,7 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
     <Dialog fullScreen={fullScreen} open={open} fullWidth maxWidth="md" onClose={handleClose}>
       <div className={`${classes.root} projectDialog__container`}>
         <div className="projectDialog__top">
-          <Typography className={classes.title} variant="h3" color="primary">
+          <Typography className={classes.title} variant={fullScreen ? 'h5' : 'h3'} color="primary">
             {name}
           </Typography>
           <div>

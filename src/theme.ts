@@ -21,6 +21,9 @@ export const theme = createMuiTheme({
   typography: {
     h3: {
       fontFamily: 'Leckerli One, cursive'
+    },
+    h5: {
+      fontFamily: 'Leckerli One, cursive'
     }
   }
 })
