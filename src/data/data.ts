@@ -171,7 +171,7 @@ The app stores its data on Firebase Realtime Database and utilizes Firebase user
   },
   {
     name: 'Weather App',
-    description: `This app displays weather local to the user uses Google Geocoding and Dark Sky APIs. The animated weather icons are SkyCons by Dark Sky. The app is served using Node.js and Express and deployed to Heroku.`,
+    description: `This project was done for part of the [freeCodeCamp](https://freecodecamp.org/) curriculum. The Weather App displays weather local to the user uses Google Geocoding and Dark Sky APIs. The animated weather icons are SkyCons by Dark Sky. The app is served using Node.js and Express and deployed to Heroku.`,
     coverImage: weather_2,
     images: [weather_1, weather_2],
     repo: 'https://github.com/EmilyDeLisle/Weather',
