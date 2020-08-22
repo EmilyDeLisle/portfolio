@@ -1,5 +1,7 @@
 .projectDialog__container {
   background: repeating-linear-gradient(45deg, #323232, #323232 10px, #353535 10px, #353535 20px);
+  height: 100%;
+  overflow-y: auto;
 }
 
 .projectDialog__top {
@@ -49,7 +51,7 @@
 }
 
 .projectDialog__description {
-  padding: 0 3em;
+  padding: 0 3em 1em 3em;
 }
 
 @media only screen and (max-width: 600px) {
@@ -59,9 +61,5 @@
 
   .projectDialog__description {
     padding: 0;
-  }
-
-  .projectDialog__controls {
-    flex-direction: column-reverse;
   }
 }
