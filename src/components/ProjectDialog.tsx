@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
     link: {
       padding: 0,
       fontSize: 'inherit',
-      marginTop: '-4px',
+      marginTop: '-3px',
     },
   })
 )

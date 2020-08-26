@@ -21,7 +21,7 @@ export const App = () => {
     <MuiThemeProvider theme={theme}>
       <div className="app">
         <TopNavBar handleNavigationClick={handleNavigationClick} />
-        <Header handleNavigationClick={handleNavigationClick} />
+        <Header />
         <About />
         <Rule />
         <Projects />

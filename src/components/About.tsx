@@ -10,8 +10,8 @@ import { Section } from './Section'
 import portrait from '../assets/portrait.jpg'
 import griffin from '../assets/griffin.png'
 
-import techBootstrap from '../assets/technologies/bootstrap.png'
-import techC from '../assets/technologies/c.png'
+// import techBootstrap from '../assets/technologies/bootstrap.png'
+// import techC from '../assets/technologies/c.png'
 import techCSS from '../assets/technologies/css.png'
 import techFirebase from '../assets/technologies/firebase.png'
 import techGit from '../assets/technologies/git.png'
@@ -20,7 +20,7 @@ import techJava from '../assets/technologies/java.png'
 import techJQuery from '../assets/technologies/jquery.png'
 import techJS from '../assets/technologies/js.png'
 import techMaterial from '../assets/technologies/material.png'
-import techNodeJS from '../assets/technologies/nodejs.png'
+// import techNodeJS from '../assets/technologies/nodejs.png'
 import techPS from '../assets/technologies/ps.png'
 import techPython from '../assets/technologies/python.png'
 import techReact from '../assets/technologies/react.png'
@@ -84,10 +84,10 @@ const technologies = [
     name: 'Python',
     image: techPython,
   },
-  {
-    name: 'C',
-    image: techC,
-  },
+  // {
+  //   name: 'C',
+  //   image: techC,
+  // },
   {
     name: 'HTML',
     image: techHTML,
@@ -108,18 +108,18 @@ const technologies = [
     name: 'Material-UI',
     image: techMaterial,
   },
-  {
-    name: 'Bootstrap',
-    image: techBootstrap,
-  },
+  // {
+  //   name: 'Bootstrap',
+  //   image: techBootstrap,
+  // },
   {
     name: 'jQuery',
     image: techJQuery,
   },
-  {
-    name: 'Node.js',
-    image: techNodeJS,
-  },
+  // {
+  //   name: 'Node.js',
+  //   image: techNodeJS,
+  // },
   {
     name: 'Photoshop',
     image: techPS,
