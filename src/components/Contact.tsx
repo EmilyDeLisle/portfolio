@@ -26,9 +26,9 @@ export const Contact = () => {
   return (
     <Section title="Let's chat!" anchorId="contact-anchor">
       <Typography gutterBottom>
-        Want to build something together? I'd love to hear from you.
+        Want to build something together? Don’t be shy!
       </Typography>
-      <Typography gutterBottom>You can get in contact with me in a couple ways:</Typography>
+      <Typography gutterBottom>Get in touch with me via...</Typography>
       <div className='contact__methods'>
         <Button
           color="inherit"
@@ -51,7 +51,7 @@ export const Contact = () => {
           LinkedIn
         </Button>
       </div>
-      <Typography color='inherit' align='center' gutterBottom>© Emily DeLisle</Typography>
+      <Typography color='inherit' align='center' variant='body2' gutterBottom>© Emily DeLisle</Typography>
     </Section>
   )
 }

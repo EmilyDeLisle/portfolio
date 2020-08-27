@@ -135,7 +135,7 @@ export const TopNavBar = ({ handleNavigationClick }: NavigationComponentProps) =
           {/* Mobile menu */}
           <Hidden mdUp>
             <div>
-              <IconButton color="primary" edge="end" onClick={handleClickMenu}>
+              <IconButton color="inherit" edge="end" onClick={handleClickMenu}>
                 <MoreIcon />
               </IconButton>
 
