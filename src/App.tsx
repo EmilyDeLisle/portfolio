@@ -1,4 +1,5 @@
 import React from 'react'
+import Typography from '@material-ui/core/Typography'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import { About, Contact, Header, Projects, Rule, ScrollToTopButton, TopNavBar } from './components'
 import { theme } from './theme'
@@ -28,6 +29,7 @@ export const App = () => {
         <Rule />
         <Contact />
         <ScrollToTopButton handleNavigationClick={handleNavigationClick} />
+        <Typography color='inherit' align='center' variant='body2'>© Emily DeLisle</Typography>
       </div>
     </MuiThemeProvider>
   )

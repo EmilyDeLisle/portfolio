@@ -51,7 +51,6 @@ export const Contact = () => {
           LinkedIn
         </Button>
       </div>
-      <Typography color='inherit' align='center' variant='body2' gutterBottom>© Emily DeLisle</Typography>
     </Section>
   )
 }
