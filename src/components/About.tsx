@@ -10,8 +10,6 @@ import { Section } from './Section'
 import portrait from '../assets/portrait.jpg'
 import griffin from '../assets/griffin.png'
 
-// import techBootstrap from '../assets/technologies/bootstrap.png'
-// import techC from '../assets/technologies/c.png'
 import techCSS from '../assets/technologies/css.png'
 import techFirebase from '../assets/technologies/firebase.png'
 import techGit from '../assets/technologies/git.png'
@@ -20,7 +18,6 @@ import techJava from '../assets/technologies/java.png'
 import techJQuery from '../assets/technologies/jquery.png'
 import techJS from '../assets/technologies/js.png'
 import techMaterial from '../assets/technologies/material.png'
-// import techNodeJS from '../assets/technologies/nodejs.png'
 import techPS from '../assets/technologies/ps.png'
 import techPython from '../assets/technologies/python.png'
 import techReact from '../assets/technologies/react.png'
@@ -28,12 +25,20 @@ import techTS from '../assets/technologies/ts.png'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    hoverEffect: {
+      '&:hover': {
+        color: theme.palette.secondary.main,
+        transition: '0.5s',
+        cursor: 'pointer',
+        textDecoration: 'none'
+      },
+    },
     photo: {
       border: `4px solid ${theme.palette.primary.main}`,
     },
     li: {
       fontFamily: 'Roboto',
-      marginBottom: '0.5em'
+      marginBottom: '0.5em',
     },
     link: {
       padding: 0,
@@ -41,13 +46,13 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const blurb = `I didn't start out as a software developer. Actually, I've taken a pretty meandering path to getting where I am now. I've been a 3D artist, graphic designer, cook, illustrator, and most recently, a hospital pharmacy technician, which is where I've stayed for nearly ten years. After dabbling a bit in coding and finding a real passion for it, I decided it was time for a pivot and dove in headfirst.
+const blurb = `I've taken a meandering path to where I am today - I’m not only a software developer. So far, I’ve been a 3D artist, graphic designer, cook, illustrator, and for the last ten years, a hospital pharmacy technician. After starting to dabble a bit in coding, starting around 2017, I found a real passion for it. My fate was sealed - I decided it was time for a pivot and dove in headfirst.  
 
-My first endeavours were with self-learning in places like [Codeacademy](https://www.codecademy.com/), [freeCodeCamp](https://www.freecodecamp.org/), and [Udemy](https://www.udemy.com/). I needed more structure so I decided to drop my full-time line as a pharmacy technician and enrol in the [Computer Systems Technology](https://www.bcit.ca/study/programs/5500dipma) program at the [British Columbia Institute of Technology](https://www.bcit.ca/).
+I started my journey with self-learning, doing projects for courses on [Codeacademy](https://www.codecademy.com/), [freeCodeCamp](https://www.freecodecamp.org/), and [Udemy](https://www.udemy.com/). Looking for a more intensive, structured environment, I decided to drop my full-time line as a pharmacy technician and enrol in the [Computer Systems Technology](https://www.bcit.ca/study/programs/5500dipma) program at the [British Columbia Institute of Technology](https://www.bcit.ca/).
 
-The CST program uses a very hands-on approach to learning and from day one I was creating some pretty cool things like taking part in some fun (and challenging) collaborative student projects. I managed to secure a sought-after co-op position and from January to September 2019 I worked as a front end engineer for [Grow Technologies](https://www.linkedin.com/company/poweredbygrow). There I got to work on some awesome stuff (with an awesome team!) and really got to sink my teeth into React. I was even along for the ride while they were [acquired](https://betakit.com/vancouver-based-grow-technologies-acquired-by-albertas-atb-financial/) by [ATB Financial](https://www.atb.com/).
+The CST program implements a hands-on approach to learning. From day one I was creating some pretty cool things and taking part in fun and challenging collaborative projects. After my second term, I secured a sought-after co-op position as a junior frontend engineer at [Grow Technologies](https://www.linkedin.com/company/poweredbygrow). From April to December 2019 I had the privilege of working on some awesome stuff with the amazing team at Grow and really got to sink my teeth into [React](https://reactjs.org/). I was even along for the ride while Grow was [acquired](https://betakit.com/vancouver-based-grow-technologies-acquired-by-albertas-atb-financial/) by [ATB Financial](https://www.atb.com/), an experience I don't think many interns get.
 
-Right now I'm in my last term at BCIT. I graduate in December 2020. I'm excited for what's next!`
+Today, I'm completing my final term at BCIT, set to graduate in December 2020. I can’t wait to see what's next!`
 
 const tidbits = `A couple extra litle tidbits about me:
 
@@ -57,7 +62,7 @@ const tidbits = `A couple extra litle tidbits about me:
 
 - I'm an avid reader of science fiction and fantasy novels (I love the Expanse!).
 
-- I have my Advanced Open Water Diver PADI certification. My favourite diving experience yet has been cenote diving in Mexico.
+- I have my Advanced Open Water Diver PADI certification. My favourite diving experience so far has been cenote diving in Mexico.
 
 - I collect and care for tropical houseplants (mostly successfully...).
 
@@ -84,10 +89,6 @@ const technologies = [
     name: 'Python',
     image: techPython,
   },
-  // {
-  //   name: 'C',
-  //   image: techC,
-  // },
   {
     name: 'HTML',
     image: techHTML,
@@ -108,18 +109,10 @@ const technologies = [
     name: 'Material-UI',
     image: techMaterial,
   },
-  // {
-  //   name: 'Bootstrap',
-  //   image: techBootstrap,
-  // },
   {
     name: 'jQuery',
     image: techJQuery,
   },
-  // {
-  //   name: 'Node.js',
-  //   image: techNodeJS,
-  // },
   {
     name: 'Photoshop',
     image: techPS,
@@ -139,29 +132,31 @@ export const About = () => {
           rel: 'noopener',
           variant: 'body2',
           color: 'primary',
-          className: classes.link,
+          className: `${classes.link} ${classes.hoverEffect}`,
         },
       },
       p: { component: Typography, props: { paragraph: true, variant: 'body2' } },
       li: {
         component: 'li',
         props: {
-          className: classes.li
-        }
-      }
+          className: classes.li,
+        },
+      },
     },
   }
 
   return (
-    <Section title="A little about me..." anchorId="about-anchor">
+    <Section title="My life story" anchorId="about-anchor">
       <div className="about__me">
-        <Grid container justify='center' spacing={4}>
+        <Grid container justify="center" spacing={4}>
           <Grid item sm={12} md={4}>
-            <img
-              className={`${classes.photo} about__photo`}
-              alt="It's me, Emily!"
-              src={portrait}
-            />
+            <div className="about__photoContainer">
+              <img
+                className={`${classes.photo} about__photo`}
+                alt="It's me, Emily!"
+                src={portrait}
+              />
+            </div>
           </Grid>
           <Grid item sm={12} md={8}>
             <Markdown options={markdownOptions}>{blurb}</Markdown>
@@ -170,11 +165,13 @@ export const About = () => {
             <Markdown options={markdownOptions}>{tidbits}</Markdown>
           </Grid>
           <Grid item sm={12} md={2}>
-            <img
-              className={`${classes.photo} about__photo about__griffin`}
-              alt="Griffin"
-              src={griffin}
-            />
+            <Tooltip title="reeeeeeeeeeeeee">
+              <img
+                className={`${classes.photo} about__photo about__griffin`}
+                alt="Griffin"
+                src={griffin}
+              />
+            </Tooltip>
           </Grid>
         </Grid>
       </div>

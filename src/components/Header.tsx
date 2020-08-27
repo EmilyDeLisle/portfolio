@@ -30,13 +30,16 @@ export const Header = () => {
       <div className="header__contents">
         <div>
           <Typography className={classes.text} variant="h1">
-            Hi! I'm <span className={classes.name}>Emily DeLisle</span>.
+            Hi!
+          </Typography>
+          <Typography className={classes.text} variant="h2">
+            I'm <span className={classes.name}>Emily DeLisle</span>.
           </Typography>
           <Typography className={`${classes.text} ${classes.subtitle}`} variant="h5" gutterBottom>
             Software Engineer | Illustrator | Plant-Whisperer | Bird-Tamer
           </Typography>
           <Typography className={classes.text} variant="h6">
-            I'm also a (soon-to-be) new grad of the Computer Systems Technology program at the
+            I'm also a (soon-to-be) grad of the Computer Systems Technology program at the
             British Columbia Institute of Technology.
           </Typography>
         </div>

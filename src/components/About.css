@@ -7,6 +7,13 @@
   border-radius: 100%;
   box-shadow: '2px 2px 4px rgba(0, 0, 0, 0.5)';
   width: 100%;
+  max-width: 25em;
+}
+
+.about__photoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .about__griffin {
@@ -26,4 +33,10 @@
   width: 100%;
   max-width: 5em;
   max-height: 5em;
+}
+
+@media only screen and (max-width: 600px) {
+  .about__photoContainer {
+    display: initial;
+  }
 }

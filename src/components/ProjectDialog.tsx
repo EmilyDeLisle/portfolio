@@ -22,6 +22,14 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       color: theme.palette.primary.contrastText,
     },
+    hoverEffect: {
+      '&:hover': {
+        color: theme.palette.secondary.main,
+        transition: '0.5s',
+        cursor: 'pointer',
+        textDecoration: 'none'
+      },
+    },
     title: {
       margin: theme.spacing(2),
       textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
@@ -56,7 +64,7 @@ export const ProjectDialog = ({ handleClose, open, project }: ProjectDialogProps
           rel: 'noopener',
           variant: 'body2',
           color: 'primary',
-          className: classes.link,
+          className: `${classes.link} ${classes.hoverEffect}`,
         },
       },
       p: { component: Typography, props: { paragraph: true, variant: 'body2' } },

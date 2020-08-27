@@ -12,21 +12,18 @@
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
   background-color: #323232;
   padding-bottom: 0.5em;
-  transition: all .2s ease-in-out;
-}
-
-.project__project-box:hover {
-  transform: scale(1.1);
+  transition: all 0.2s;
 }
 
 .projects__project-box:hover {
   cursor: pointer;
+  transform: translateY(-5px);
 }
 
 .projects__project-img {
   max-width: 100%;
   max-height: 320px;
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
 }
 
 @media only screen and (max-width: 600px) {
