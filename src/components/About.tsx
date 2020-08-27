@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
         color: theme.palette.secondary.main,
         transition: '0.5s',
         cursor: 'pointer',
-        textDecoration: 'none'
+        textDecoration: 'none',
       },
     },
     photo: {
@@ -46,9 +46,11 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const blurb = `I've taken a meandering path to where I am today - I’m not only a software developer. So far, I’ve been a 3D artist, graphic designer, cook, illustrator, and for the last ten years, a hospital pharmacy technician. After starting to dabble a bit in coding, starting around 2017, I found a real passion for it. My fate was sealed - I decided it was time for a pivot and dove in headfirst.  
+const blurb = `I've taken a meandering path to where I am today - I’m not only a software developer. So far, I’ve been a 3D artist, graphic designer, cook, illustrator, and for the last ten years, a hospital pharmacy technician.
 
-I started my journey with self-learning, doing projects for courses on [Codeacademy](https://www.codecademy.com/), [freeCodeCamp](https://www.freecodecamp.org/), and [Udemy](https://www.udemy.com/). Looking for a more intensive, structured environment, I decided to drop my full-time line as a pharmacy technician and enrol in the [Computer Systems Technology](https://www.bcit.ca/study/programs/5500dipma) program at the [British Columbia Institute of Technology](https://www.bcit.ca/).
+After my first taste of coding around 2017 I uncovered a passion for it. I started my journey with self-learning, doing projects for courses on [Codeacademy](https://www.codecademy.com/), [freeCodeCamp](https://www.freecodecamp.org/), and [Udemy](https://www.udemy.com/).
+
+This wasn't enough for me. Looking for a more intensive, structured environment, I decided it was time for a pivot and dove in headfirst. I dropped my full-time line as a pharmacy technician and enrolled in the [Computer Systems Technology](https://www.bcit.ca/study/programs/5500dipma) program at the [British Columbia Institute of Technology](https://www.bcit.ca/).
 
 The CST program implements a hands-on approach to learning. From day one I was creating some pretty cool things and taking part in fun and challenging collaborative projects. After my second term, I secured a sought-after co-op position as a junior frontend engineer at [Grow Technologies](https://www.linkedin.com/company/poweredbygrow). From April to December 2019 I had the privilege of working on some awesome stuff with the amazing team at Grow and really got to sink my teeth into [React](https://reactjs.org/). I was even along for the ride while Grow was [acquired](https://betakit.com/vancouver-based-grow-technologies-acquired-by-albertas-atb-financial/) by [ATB Financial](https://www.atb.com/), an experience I don't think many interns get.
 
@@ -60,11 +62,11 @@ const tidbits = `A couple extra litle tidbits about me:
 
 - I also love games of the tabletop variety. Most recently I've been playing Burning Wheel.
 
-- I'm an avid reader of science fiction and fantasy novels (I love the Expanse!).
+- I'm an avid reader of science fiction and fantasy novels (I love the Expanse!)
 
 - I have my Advanced Open Water Diver PADI certification. My favourite diving experience so far has been cenote diving in Mexico.
 
-- I collect and care for tropical houseplants (mostly successfully...).
+- I collect and care for tropical houseplants (mostly successfully...)
 
 - I am owned by a 155-gram white-bellied caique parrot named Griffin.`
 
@@ -165,13 +167,15 @@ export const About = () => {
             <Markdown options={markdownOptions}>{tidbits}</Markdown>
           </Grid>
           <Grid item sm={12} md={2}>
-            <Tooltip title="reeeeeeeeeeeeee">
-              <img
-                className={`${classes.photo} about__photo about__griffin`}
-                alt="Griffin"
-                src={griffin}
-              />
-            </Tooltip>
+            <div className="about__griffinContainer">
+              <Tooltip title="reeeeeeeeeeeeee">
+                <img
+                  className={`${classes.photo} about__photo about__griffin`}
+                  alt="Griffin"
+                  src={griffin}
+                />
+              </Tooltip>
+            </div>
           </Grid>
         </Grid>
       </div>
