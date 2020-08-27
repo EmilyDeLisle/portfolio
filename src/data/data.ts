@@ -171,9 +171,7 @@ The data is stored in a [Firebase Realtime Database](https://firebase.google.com
   },
   {
     name: 'MedManager',
-    description: `This project is held together with hope and prayers.
-
-**MedManager** is an app used to manage daily medication dosing. It tracks dosing times for various medications entered by the user and reminds them when they are close to or past a dosing time. It also stores contact information for the user's pharmacy.
+    description: `**MedManager** is an app used to manage daily medication dosing. It tracks dosing times for various medications entered by the user and reminds them when they are close to or past a dosing time. It also stores contact information for the user's pharmacy.
 
 This was a collaborative student project worked on by myself and two other students in term 1 of the Computer Systems Technology program at BCIT over a period of about a month. It was our first major project using the Agile and scrum process and also our first taste of Git (and merge conflicts... so many merge conflicts).
 
@@ -200,8 +198,6 @@ Since this application would, ostensibly, hold sensitive personal and medical in
   {
     name: 'Weather App',
     description: `This little weather-telling app was one of the first things I built that makes use of external APIs, in this case [Google Geocoding](https://developers.google.com/maps/documentation/geocoding/overview) and [Dark Sky](https://darksky.net/dev) APIs. It was originally a static webpage, but I later went back and wrote a little [Node.js](https://nodejs.org/) service (using Express) and deployed it to [Heroku](https://www.heroku.com/).
-
-I'm not sure how useful an app is that tells you only your current local weather, but there you go 🤷‍♀️.
 
 The animated icons are [Skycons](https://darkskyapp.github.io/skycons/), also by Dark Sky.`,
     coverImage: weather_2,
